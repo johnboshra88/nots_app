@@ -3,17 +3,19 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nots_app/widgets/constants.dart';
 
 class CustomeTextField extends StatelessWidget {
-  const CustomeTextField({super.key});
-
+  const CustomeTextField({super.key, required this.hint, this.maxLines = 1});
+  final String hint;
+  final int maxLines;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      maxLines: maxLines,
       cursorColor: kPrimaryColor,
       decoration: InputDecoration(
-          hintText: 'Title',
+          hintText: hint,
           labelText: 'please write',
-          suffixIcon: Icon(Icons.message),
-          prefixIcon: Icon(FontAwesomeIcons.pen),
+          suffixIcon: const Icon(Icons.message),
+          prefixIcon: const Icon(FontAwesomeIcons.pen),
           border: buildBorder(),
           enabledBorder: buildBorder(),
           focusedBorder: buildBorder(kPrimaryColor)),
