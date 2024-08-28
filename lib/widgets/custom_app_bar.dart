@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nots_app/widgets/custom_icon.dart';
-import 'package:nots_app/widgets/custom_not_item.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.title, required this.icon});
@@ -13,11 +12,11 @@ class CustomAppBar extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 28,
           ),
         ),
-        Spacer(),
+        const Spacer(),
         CustomeSearchItem(
           icon: icon,
         ),
