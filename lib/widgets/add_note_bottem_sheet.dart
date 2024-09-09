@@ -29,13 +29,16 @@ class _AddNoteBottemSheetState extends State<AddNoteBottemSheet> {
           }
         },
         builder: (context, state) {
-          return const ModalProgressHUD(
+          return ModalProgressHUD(
               inAsyncCall: false,
               child: AbsorbPointer(
                 absorbing: State is AddNoteLoading ? true : false,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child: SingleChildScrollView(child: AddNoteForm()),
+                  padding: EdgeInsets.only(
+                      left: 16,
+                      right: 16,
+                      bottom: MediaQuery.of(context).viewInsets.bottom),
+                  child: const SingleChildScrollView(child: AddNoteForm()),
                 ),
               ));
         },
