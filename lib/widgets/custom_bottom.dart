@@ -16,7 +16,7 @@ class CustomBottom extends StatelessWidget {
         height: 50,
         child: Center(
           child: isLoading
-              ? SizedBox(
+              ? const SizedBox(
                   height: 24,
                   width: 24,
                   child: const CircularProgressIndicator(
