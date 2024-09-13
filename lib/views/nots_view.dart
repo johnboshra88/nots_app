@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nots_app/cubits/cubit/notes_cubit.dart';
+
 import 'package:nots_app/widgets/add_note_bottem_sheet.dart';
 import 'package:nots_app/widgets/notes_view_body.dart';
 
@@ -19,7 +18,7 @@ class NotesView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16)),
               context: context,
               builder: (context) {
-                return AddNoteBottemSheet();
+                return const AddNoteBottemSheet();
               });
         },
         child: const Icon(
